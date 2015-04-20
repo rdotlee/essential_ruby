@@ -46,7 +46,7 @@ def mean(list_of_numbers)
   # Let's re-use the work we did above in the sum method
 
   # ====================
-  # Your code goes here.
+  return sum(list_of_numbers)/list_of_numbers.count
   # ====================
 end
 
@@ -65,8 +65,14 @@ def variance(list_of_numbers)
   # ====================
   # Your code goes here.
   # ====================
+  set_mean=mean(list_of_numbers)
+  diffs =[]
+  list_of_numbers.each do |num|
+    square_diff=(set_mean-num)**2
+    diffs.push(square_diff)
+  end
+  return mean(diffs)
 end
-
 # STANDARD DEVIATION
 # ==================
 # To find the standard deviation of a set,
@@ -74,9 +80,11 @@ end
 
 def standard_deviation(list_of_numbers)
   # ====================
-  # Your code goes here.
+  return variance(list_of_numbers)**0.5
   # ====================
 end
+
+
 
 
 # Finally, everything above allows us to do:

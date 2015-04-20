@@ -7,7 +7,10 @@ first = "raghu".capitalize
 last = "betina".capitalize
 
 full = first + " " + last
-lucky_number = rand(1..100) + 7
+lucky_number = rand(1..100)
+puts lucky_number
+lucky_number+=7
+puts lucky_number
 
 # Adding strings together with the + operator
 message1 = "Howdy, " + full + ". Your lucky number for today is " + lucky_number.to_s + "."
